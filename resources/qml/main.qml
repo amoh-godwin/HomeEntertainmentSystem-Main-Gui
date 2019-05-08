@@ -1,6 +1,7 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.12
+import "components"
 
 ApplicationWindow {
     id: mainWindow
@@ -54,17 +55,11 @@ ApplicationWindow {
     }
     StackView {
         anchors.fill: parent
-        initialItem: first
+        initialItem: folderList
     }
 
-    Component {
-        id: first
-
-        Rectangle {
-            anchors.fill: parent
-            color: "gold"
-        }
-
+    FolderList {
+        id: folderList
     }
 
 }
