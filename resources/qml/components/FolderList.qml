@@ -7,6 +7,11 @@ Component {
 
     GridView {
         anchors.fill: parent
+        cellWidth: 250
+        cellHeight: 320
+
+        delegate: FolderListDelegate {}
+        model: FolderModel {}
     }
 
 }

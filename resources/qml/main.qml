@@ -2,6 +2,7 @@ import QtQuick 2.12
 import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.12
 import "components"
+import "others"
 
 ApplicationWindow {
     id: mainWindow
@@ -9,6 +10,10 @@ ApplicationWindow {
     width: 800
     height: 500
     title: qsTr("Home Entertainment | Main")
+
+    Settings {
+        id: settings
+    }
 
     menuBar: MenuBar {
 
@@ -53,6 +58,7 @@ ApplicationWindow {
         }
 
     }
+
     StackView {
         anchors.fill: parent
         initialItem: folderList
